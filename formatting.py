@@ -50,3 +50,4 @@ print("~" * 70)
 
 TEMPLATE_TREN = "Trenul pleaca din {s_plecare} la data de {data_plecare} ora {ora_plecare} si ajunge la {s_sosire} in data de {data_sosire} la ora {ora_sosire}."
 print(TEMPLATE_TREN.format(**ticket))
+
