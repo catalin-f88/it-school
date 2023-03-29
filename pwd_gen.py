@@ -16,10 +16,6 @@ def generate_numbers(length):
     while current < length:
         num_gen.append(random.randint(0, 9))
         current += 1
-    # dupl_num = list(dict.fromkeys(num_gen))
-    # while len(dupl_num) < length:
-    #     dupl_num.append(random.randint(0, 9))
-    #     dupl_num = list(dict.fromkeys(dupl_num))
     return num_gen
 
 def generate_letters(length):
