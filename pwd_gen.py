@@ -62,7 +62,6 @@ def generate_password(length, num_digits, num_symbols):
         if result[i] == result[i-1]:
             random.shuffle(result)
     password = "".join(str(x) for x in result)
+    return password
 
-    print(f"Your randomly generated password is: {password}")
-
-generate_password(args.length, args.digits, args.symbols)
+print(f"Your randomly generated password is: {generate_password(args.length, args.digits, args.symbols)}")

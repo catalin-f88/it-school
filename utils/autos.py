@@ -76,11 +76,13 @@ class GasStation:
     def fill(self, car: Car, litters: int):
         if self.__busy:
             raise ValueError("Busy")
+        car.stop_engine()
+        self.__busy = True
         for x in range(1, litters + 1):
             try:
                 car.refill(1)
             except ValueError:
                 break
+        self.__busy = False
         return x * self.__price
         
-""" stop engine + pus pompa pe busy si apoi pe free """
