@@ -1,0 +1,2 @@
+Current Fibonacci iteration: 3 
+ Fibonacci sequence result: 1

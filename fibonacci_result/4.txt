@@ -1,0 +1,2 @@
+Current Fibonacci iteration: 4 
+ Fibonacci sequence result: 2

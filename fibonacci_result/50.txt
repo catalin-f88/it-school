@@ -1,0 +1,2 @@
+Current Fibonacci iteration: 50 
+ Fibonacci sequence result: 7778742049
