@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<head>
+<title>Hidden JPG - Encrypt secret messages inside an image</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+    <div class="container" style="padding:10px;">
+        <div class="row">
+            <div class="col-12">
+                <form>
+                    <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/home/">Landing Page</button>
+                    <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/encrypt/">Encrypt another message</button>
+                    <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/decrypt/">Decrypt another image</button>
+                    <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/docs/">Documentation</button>
+                </form>
+                <p><h1>Hidden JPG - Send secret messages inside an image</h1></p>
+            <p>Please upload a .JPG file and the text you want to encrypt:</p>
+            <form method="POST" class="post-form" enctype="multipart/form-data">  
+                    {% csrf_token %}  
+                    {{ form.as_p }}  
+                <p> </p>
+                <button type="submit" class="btn btn-primary">Encrypt and Download File</button>  
+            </form>  
+        </div>
+    </div>
+</div>
+</body>  
+</html>
