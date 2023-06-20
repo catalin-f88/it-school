@@ -8,12 +8,15 @@
 <div class="container" style="padding:10px;">
     <div class="row">
         <div class="col-12">
+  <div style="text-align: center;">
     <form>
-      <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/home/">Landing Page</button>
-      <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/encrypt/">Encrypt another message</button>
-      <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/decrypt/">Decrypt another image</button>
-      <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/docs/">Documentation</button>
+        <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/home/">Landing Page</button>
+        <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/encrypt/">Encrypt another message</button>
+        <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/decrypt/">Decrypt another image</button>
+        <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/docs/">Documentation</button>
     </form>
+        <img width="250" height="auto" src="{% static 'logo.png' %}" alt="Hidden JPG Logo" >
+        </div>
             <p><h1>Hidden JPG - Retrieve message hidden in image</h1></p>
             <p>Please upload a .JPG file that contains a hidden message:</p>
             <br>

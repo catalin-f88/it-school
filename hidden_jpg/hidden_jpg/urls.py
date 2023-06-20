@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('encrypt/', include('encrypt.urls'), name='encrypt'),
     path('decrypt/', include('decrypt.urls'), name='decrypt'),
+    path('home/', include('home.urls'), name='home'),
 ]
