@@ -5,4 +5,4 @@ from django.http import HttpResponse
 # Create your views here.
 def home(request):
     counter = UserForm.objects.filter().count()
-    return HttpResponse(counter)
+    return render(request,"home.html",{'counter':counter})

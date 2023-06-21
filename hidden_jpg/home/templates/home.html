@@ -1,0 +1,44 @@
+{% load static %}
+<html>
+<head>
+<title>Encrypt secret messages inside an image</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+    <div class="container" style="padding:10px;">
+        <div class="row">
+            <div class="col-12" >
+                <div style="text-align: left;">
+                <form>
+                    <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/home/">Landing Page</button>
+                    <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/encrypt/">Encrypt another message</button>
+                    <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/decrypt/">Decrypt another image</button>
+                    <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/docs/">Documentation</button>
+                </form>
+                    <img width="250" height="auto" src="{% static 'logo.png' %}" alt="Hidden JPG Logo" >
+                    </div>
+                <p><h1>Welcome to Hidden JPG!</h1></p>
+            <p>With this application you can encrypt or decrypt secret messages hidden in .JPG files.
+            To encrypt a secret message inside an image follow these steps:</p>
+            <ul>
+                <li> Click the ENCRYPT button </li>
+                <li> Select the image you want to upload </li>
+                <li> Write the message you want to hide inside </li>
+                <li> Click the ENCRYPT AND DOWNLOAD FILE button </li>
+            </ul>
+            <p>You will be given back the same image but with a hidden message inside.</p>
+            <p>The image will work the same as a normal image and if you upload it in the DECRYPT section you can see the message hidden inside </p>
+            <p> </p>
+            <p> In order to decrypt a message hidden inside a picture, follow these steps:</p>
+            <ul>
+                <li> Click the DECRYPT button </li>
+                <li> Select the image you know it has a hidden message </li>
+                <li> Click the DECRYPT HIDDEN MESSAGE button </li>
+            </ul>
+            <br>
+            <p> Since lauch, this application has encrypted <b>{{ counter }}</b> messages inside images.</p>
+        </div>
+    </div>
+</div>
+</body>  
+</html>
