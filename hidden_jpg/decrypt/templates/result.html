@@ -8,7 +8,7 @@
 <div class="container" style="padding:10px;">
     <div class="row">
         <div class="col-12">
-    <div style="text-align: center;">
+    <div style="text-align: left;">
         <form>
             <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/home/">Landing Page</button>
             <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/encrypt/">Encrypt another message</button>
@@ -17,7 +17,7 @@
         </form>
             <img width="250" height="auto" src="{% static 'logo.png' %}" alt="Hidden JPG Logo" >
             </div>
-            <p><h1>Hidden JPG - Decrypted message result</h1></p>
+            <p><h1>Decrypted message result</h1></p>
             <p>The hidden message encrypted inside the image is:</p>
             <p> </p>
             <b> {{ result }} </b>

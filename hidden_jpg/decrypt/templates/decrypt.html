@@ -1,14 +1,14 @@
 {% load static %}
 <html>
 <head>
-<title>Hidden JPG - Decrypt messages encrypted inside image</title>
+<title>Decrypt messages encrypted inside image</title>
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
 </head>
 <body>
 <div class="container" style="padding:10px;">
     <div class="row">
         <div class="col-12">
-  <div style="text-align: center;">
+  <div style="text-align: left;">
     <form>
         <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/home/">Landing Page</button>
         <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/encrypt/">Encrypt another message</button>
@@ -17,7 +17,7 @@
     </form>
         <img width="250" height="auto" src="{% static 'logo.png' %}" alt="Hidden JPG Logo" >
         </div>
-            <p><h1>Hidden JPG - Retrieve message hidden in image</h1></p>
+            <p><h1>Retrieve message hidden in image</h1></p>
             <p>Please upload a .JPG file that contains a hidden message:</p>
             <br>
             <form method="post" enctype="multipart/form-data">
