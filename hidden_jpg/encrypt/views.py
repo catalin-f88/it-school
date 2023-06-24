@@ -14,12 +14,15 @@ def encrypt(request):
             exifHeader.hide(request.FILES['file'], output_file, request.POST['message'])
             model_instance = user.save(commit=False)
             model_instance.save()
-            if output_file != '':
-                path = open(output_file, 'rb')
-                mime_type, _ = mimetypes.guess_type(output_file)
-                response = HttpResponse(path, content_type=mime_type)
-                response['Content-Disposition'] = "attachment; filename=%s" % output_file
-                return response
+            try:
+                if output_file != '':
+                    path = open(output_file, 'rb')
+                    mime_type, _ = mimetypes.guess_type(output_file)
+                    response = HttpResponse(path, content_type=mime_type)
+                    response['Content-Disposition'] = "attachment; filename=%s" % output_file
+                    return response
+            except Exception as err:
+                return HttpResponse(f"Error processing your file. \n {err}")
             else:
                 return HttpResponse("Error processing your file.")
 
