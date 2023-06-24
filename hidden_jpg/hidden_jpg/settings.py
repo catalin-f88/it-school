@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'encrypt',
     'decrypt',
     'home',
+    'jpgdocs'
 ]
 
 MIDDLEWARE = [
