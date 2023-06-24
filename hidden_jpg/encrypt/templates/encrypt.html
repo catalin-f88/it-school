@@ -14,15 +14,13 @@
                     <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/docs/">Documentation</button>
                 </form>
                     <img width="250" height="auto" src="{% static 'logo.png' %}" alt="Hidden JPG Logo" >
-                    </div>
                 <p><h1>Hidden JPG - Send secret messages inside an image</h1></p>
             <p>Please upload a .JPG file and the text you want to encrypt:</p>
-            <mark><b>{{ error }}</b></mark>
             <form method="POST" class="post-form" enctype="multipart/form-data">  
                     {% csrf_token %}  
                     {{ form.as_p }}  
                 <p> </p>
-                <button type="submit" class="btn btn-primary">Encrypt and Download File</button>  
+            <button type="submit" class="btn btn-primary">Encrypt and Download File</button>  
             </form>  
         </div>
     </div>

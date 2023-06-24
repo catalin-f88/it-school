@@ -21,8 +21,7 @@ def encrypt(request):
                 "encrypted_" + request.FILES['file'].name
             ext = os.path.splitext(output_file)[-1].lower()
             if ext == ".jpg" or ext == ".jpeg":
-                exifHeader.hide(
-                    request.FILES['file'], output_file, request.POST['message'])
+                exifHeader.hide(request.FILES['file'], output_file, request.POST['message'])
                 model_instance = user.save(commit=False)
                 model_instance.save()
                 path = open(output_file, 'rb')
@@ -31,9 +30,7 @@ def encrypt(request):
                 response['Content-Disposition'] = "attachment; filename=%s" % output_file
                 return response
             else:
-                user = UserForm()
-                return render(request, "encrypt.html", {"form": user, "error": "[ERROR] The file you uploaded is not a valid .JPG image! \n Please upload a .JPG file bellow:"})
-        return render("encrypt.html", {"form": user, "error": "Message encrypted. The hidden message is hidden in the downloaded image!"})
+                return render(request, "error.html", {"error": "[ERROR] The file you uploaded is not a valid .JPG or .JPEG image!"})
     else:
         user = UserForm()
         return render(request, "encrypt.html", {'form': user, 'error': ""})

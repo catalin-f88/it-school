@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+<head>
+<title>Hidden JPG - Error encrypting your message</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+<div class="container" style="padding:10px;">
+    <div class="row">
+        <div class="col-12">
+    <div style="text-align: left;">
+        <form>
+            <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/">Landing Page</button>
+            <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/encrypt/">Encrypt message</button>
+            <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/decrypt/">Decrypt image</button>
+            <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/docs/">Documentation</button>
+        </form>
+            <img width="250" height="auto" src="{% static 'logo.png' %}" alt="Hidden JPG Logo" >
+            </div>
+            <p><h1>Error encrypting your message</h1></p>
+            <p>The following error occured while trying to encrypt your message:</p>
+            <p> </p>
+            <b> {{ error }} </b>
+            <p> </p>
+            <form>
+                <button class="btn btn-primary" type="submit" formaction="http://127.0.0.1:8000/encrypt/">Try again with another image</button>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>
+</body>  
+</html>
