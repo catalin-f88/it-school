@@ -12,7 +12,11 @@ def encrypt(request):
     - a .jpg or .jpeg file (no other image formats supported)
     - a short message to be encrypted
     After the message is embedded in the image, a new file with the hidden message will be returned
-    to the user. The message can only be decrypted if this image is parsed to the decrypt() function.
+    to the user for download. 
+    The user's name, file name and the encrypted message are saved in a sqlite3 database (db).
+    The message can only be decrypted if this image is parsed to the decrypt() function.
+    If the file is not a .jpeg or .jpg, the user will be redirected to the error.html with the 
+    error message parsed to the user in the {{ error }} variable.
     """
     if request.method == 'POST':
         user = UserForm(request.POST, request.FILES)
