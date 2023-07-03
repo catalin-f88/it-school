@@ -37,4 +37,4 @@ def encrypt(request):
                 return render(request, "error.html", {"error": "[ERROR] The file you uploaded is not a valid .JPG or .JPEG image!"})
     else:
         user = UserForm()
-        return render(request, "encrypt.html", {'form': user, 'error': ""})
+        return render(request, "encrypt.html", {'form': user})

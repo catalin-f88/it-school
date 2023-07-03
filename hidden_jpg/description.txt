@@ -1,0 +1,26 @@
+Proiect: Steganografie - API
+Descriere
+Acest proiect constă în dezvoltarea unui REST API pentru criptarea și decriptarea mesajelor în imagini utilizând tehnica de steganografie. API-ul va oferi endpoint-uri pentru încărcarea imaginilor, criptarea și decriptarea mesajelor, precum și pentru obținerea metricilor referitoare la numărul de imagini codate și decodate. De asemenea, va fi disponibil un endpoint pentru a accesa documentația API-ului.
+
+Interfață
+REST API
+
+Endpoints
+POST /encrypt
+Content type: multipart/form-data Prin acest endpoint, se trimite o imagine către server pentru a cripta un mesaj în ea. Mesajul este trimis în același form-data.
+
+POST /decrypt
+Content type: multipart/form-data Prin acest endpoint, se trimite o imagine către server pentru a extrage mesajul din ea.
+
+GET /metrics
+Returnează numărul de imagini codate și decodate.
+
+GET /docs
+Returnează documentația API-ului.
+
+Cerințe
+Metricele referitoare la numărul de imagini codate și decodate sunt reținute într-o bază de date.
+Cerințe non-funcționale
+Implementarea unui sistem de logging pentru a înregistra evenimentele și erorile importante.
+Tratarea strictă a erorilor pentru a oferi un feedback clar în cazul problemelor.
+Stocarea datelor într-o bază de date SQLite.
